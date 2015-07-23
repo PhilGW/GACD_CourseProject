@@ -27,7 +27,9 @@ The data summary produced by run_analysis is entitled "ExerciseDataSummary.txt",
 *__subject_id__: The number corresponding to the experimental subject (1 through 30)
 *__activity__: The name of the activity (Laying, sitting, walking, etc.)
 
-The remainder of the variables are accelerometer measurements. Each column gives the mean of all measurements for the activity type and subject_id given in columns 1 and 2, as indicated by the prefix 'Mean'.  
+The remainder of the variables are accelerometer measurements in units of 'g' (mutliples of the acceleration resulting from Earth's gravity at sea level). 
+Each column gives the mean of all measurements for the activity type and subject_id given in columns 1 and 2, as indicated by the prefix 'Mean'.  
+
 Each column heading provides the information:
 *Whether the data being averaged is mean data or standard deviation (StDev) data
 *The type and direction of the signal, as described in the excerpt below from the UCI depository:
@@ -59,11 +61,7 @@ fBodyAccJerkMag
 fBodyGyroMag
 fBodyGyroJerkMag
 
-
-
-
-
-Mean_MeanoftBodyACC_X
+1 column is provided for the mean of each measurement over the subject and activity type.
 
 
 
