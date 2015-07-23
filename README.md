@@ -15,3 +15,21 @@ However, the following must be done prior to running the script:
 
 Once these are in place, the analysis can be started by running the script 'run_analysis.R'.
 
+###Data summary construction:
+The following steps are used to 
+
+1. The "test set" of accelerometer data is read in from the file "UCI HAR Dataset/test/X_test.txt"
+2. The "activity codes" describing which activity is being performed are read from the file "UCI HAR Dataset/test/y_test.txt" and appended as an additional column
+3. The "subject codes" describing which subject is being recorded are read from the file "UCI HAR Dataset/test/subject_test.txt" and appended as an additional column
+4. The "train set" of accelerometer data is read in from the file "UCI HAR dataset/train/X_train.txt"
+5. The "activity codes" describing which activity is being performed are read from the file "UCI HAR Dataset/train/y_train.txt" and appended as an additional column
+6. The "subject codes" describing which subject is being recorded are read from the file "UCI HAR Dataset/train/subject_train.txt" and appended as an additional column
+7. The test-set rows and train-set rows are combined into a single data frame
+8. The column names obtained from "UCI HAR Dataset/features.txt" are assigned to the data, along with headings for "activity" (1-5) and "subject_ID" (1-30).
+9. A new data frame, "edata", is constructed for only those columns containing the words "mean" or "stdev"
+10. Activity and subject_id are made into factors.
+
+This data frame is used to summarize the results of the accelerometer readings.  The summary uses melt() and dcast() to list the average of each accelerometer category by subject_id and activity type.  This is saved as the file ExerciseDataSummary.txt
+
+
+

@@ -5,21 +5,68 @@ date: "July 23, 2015"
 output: html_document
 ---
 
-#Codebook
-##Getting and Cleaning Data Course Project
+#Getting and Cleaning Data Course Project
 
-###The data table to be analyzed is constructed in the following way:
+##Study Design
+This data analysis makes use of data obtained from a Samsung smartphone accelerometer, available from the UC-Irvine Machine Learning Depository at:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The data include accelerometer readings created while 30 subjects performed each of 6 tasks:
+*Laying
+*Sitting
+*Standing 
+*Walking
+*Walking Up Stairs
+*Walking Down Stairs
 
-1. The "test set" of accelerometer data is read in from the file "UCI HAR Dataset/test/X_test.txt"
-2. The "activity codes" describing which activity is being performed are read from the file "UCI HAR Dataset/test/y_test.txt" and appended as an additional column
-3. The "subject codes" describing which subject is being recorded are read from the file "UCI HAR Dataset/test/subject_test.txt" and appended as an additional column
-4. The "train set" of accelerometer data is read in from the file "UCI HAR dataset/train/X_train.txt"
-5. The "activity codes" describing which activity is being performed are read from the file "UCI HAR Dataset/train/y_train.txt" and appended as an additional column
-6. The "subject codes" describing which subject is being recorded are read from the file "UCI HAR Dataset/train/subject_train.txt" and appended as an additional column
-7. The test-set rows and train-set rows are combined into a single data frame
-8. The column names obtained from "UCI HAR Dataset/features.txt" are assigned to the data, along with headings for "activity" (1-5) and "subject_ID" (1-30).
-9. A new data frame, "edata", is constructed for only those columns containing the words "mean" or "stdev"
-10. Activity and subject_id are made into factors.
+Data are available for download at:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-This data frame is used to summarize the results of the accelerometer readings.
+##Codebook
+All analysis is performed by the script 'run_analysis.R'. See README for details.
+The data summary produced by run_analysis is entitled "ExerciseDataSummary.txt", and has the following variables:
+*__subject_id__: The number corresponding to the experimental subject (1 through 30)
+*__activity__: The name of the activity (Laying, sitting, walking, etc.)
+
+The remainder of the variables are accelerometer measurements. Each column gives the mean of all measurements for the activity type and subject_id given in columns 1 and 2, as indicated by the prefix 'Mean'.  
+Each column heading provides the information:
+*Whether the data being averaged is mean data or standard deviation (StDev) data
+*The type and direction of the signal, as described in the excerpt below from the UCI depository:
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+
+
+
+
+Mean_MeanoftBodyACC_X
+
+
+
+
+
 
