@@ -31,8 +31,8 @@ The remainder of the variables are accelerometer measurements in units of 'g' (m
 Each column gives the mean of all measurements for the activity type and subject_id given in columns 1 and 2, as indicated by the prefix 'Mean'.  
 
 Each column heading provides the information:
-*Whether the data being averaged is mean data or standard deviation (StDev) data
-*The type and direction of the signal, as described in the excerpt below from the UCI depository:
+* Whether the data being averaged is mean data or standard deviation (StDev) data
+* The type and direction of the signal, as described in the excerpt below from the UCI depository:
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
