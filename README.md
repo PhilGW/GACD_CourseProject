@@ -31,5 +31,8 @@ The following steps are used to
 
 This data frame is used to summarize the results of the accelerometer readings.  The summary uses melt() and dcast() to list the average of each accelerometer category by subject_id and activity type.  This is saved as the file ExerciseDataSummary.txt
 
+The output of the script is included in the repo as 'ExerciseDataSummary.txt'.
+Details on the variable names and units can be found in the GACD_Codebook markdown file.
+
 
 
