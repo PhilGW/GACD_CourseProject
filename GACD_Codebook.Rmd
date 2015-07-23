@@ -11,12 +11,12 @@ output: html_document
 This data analysis makes use of data obtained from a Samsung smartphone accelerometer, available from the UC-Irvine Machine Learning Depository at:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 The data include accelerometer readings created while 30 subjects performed each of 6 tasks:
-*Laying
-*Sitting
-*Standing 
-*Walking
-*Walking Up Stairs
-*Walking Down Stairs
+* Laying
+* Sitting
+* Standing 
+* Walking
+* Walking Up Stairs
+* Walking Down Stairs
 
 Data are available for download at:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -24,8 +24,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ##Codebook
 All analysis is performed by the script 'run_analysis.R'. See README for details.
 The data summary produced by run_analysis is entitled "ExerciseDataSummary.txt", and has the following variables:
-*__subject_id__: The number corresponding to the experimental subject (1 through 30)
-*__activity__: The name of the activity (Laying, sitting, walking, etc.)
+* __subject_id__: The number corresponding to the experimental subject (1 through 30)
+* __activity__: The name of the activity (Laying, sitting, walking, etc.)
 
 The remainder of the variables are accelerometer measurements in units of 'g' (mutliples of the acceleration resulting from Earth's gravity at sea level). 
 Each column gives the mean of all measurements for the activity type and subject_id given in columns 1 and 2, as indicated by the prefix 'Mean'.  
@@ -61,7 +61,7 @@ fBodyAccJerkMag
 fBodyGyroMag
 fBodyGyroJerkMag
 
-1 column is provided for the mean of each measurement over the subject and activity type.
+1 column is provided for the mean of each measurement over the subject and activity type.  Therefore, 'Mean_StDevoffBodyAccJerkZ' is the average standard deviation of the fourier-transformed BodyAccJerk measurement in the z axis for the given subject and activity type.  
 
 
 
