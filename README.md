@@ -1,4 +1,4 @@
-# GACD_CourseProject
+# Getting and Cleaning Data Course Project
 ##Course Project for Getting and Cleaning Data
 
 This data analysis makes use of data obtained from a Samsung smartphone accelerometer, available from the UC-Irvine Machine Learning Depository at:
